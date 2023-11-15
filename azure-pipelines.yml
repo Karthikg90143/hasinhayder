@@ -1,0 +1,15 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- python -m pip install --upgrade pip==20.1 setuptools>=40.1.0 wheel
+    python -m pip install dbt-synapse
+  displayName: 'dbt-synapse install'
